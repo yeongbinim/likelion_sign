@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<section class="sign">
+	<h1>서비스</h1><br><br>
+	<form action="{% url 'login'%}" method ="post">
+		{% csrf_token %}
+		<input name="username" type="text" placeholder="아이디"/>
+		<br/>
+		<input name="password" type="password" placeholder="비밀번호"/>
+		<br/>
+		<span>{{error}}</span><br/>
+		<input type="submit" value="로그인"/>
+	</form>
+	<p>아직 서비스의 회원이 아니신가요? <a href="{% url 'signup' %}">회원가입</a></p>
+</section>
+{% endblock %}

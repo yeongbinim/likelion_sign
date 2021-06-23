@@ -1,0 +1,54 @@
+.sign{
+    text-align: center;
+    padding: 5rem 0px;
+}
+
+.sign h1{
+	font-size: 3.6rem;
+}
+
+.sign input {
+    width: 35rem;
+    height: 5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    border: 1px solid #f0f0f0;
+}
+.sign select{
+    width: 37.5rem;
+    height: 5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 5px 0px 30px;
+    border: 1px solid #f0f0f0;
+}
+.sign input[type=submit]{
+    font-weight: 900;
+    color: #ffffff;
+    background-color: var(--color-main);
+    margin-bottom: 30px;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.sign input[type=submit]:hover{
+	opacity: 0.7;
+}
+
+.sign p{
+    text-decoration: none;
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+.sign a{
+	color: var(--color-main);
+	text-decoration: none;
+}
+
+.sign a:hover{
+	opacity: 0.7;
+}
+

@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %} 
+{% block content %}
+
+<!-- templates > post_read.html -->
+<a href="{% url 'home' %}">[메인]</a>
+<h1>{{data.title}}</h1>
+<br />
+작성일 : {{data.created}} 최종 수정일 : {{data.modified}}
+<hr />
+<p>{{data.body}}</p>
+<button><a href = "{% url 'post_edit' data.id %}">글 수정</a></button>
+<button><a href = "{% url 'post_delete' data.id %}">글 삭제</a></button>
+<form action = "{% url 'comment_create' data.id %}" method="post">
+    {% csrf_token %}
+    댓글 <input type="text" name="comment">
+    <input type="submit" value="댓글등록">
+</form>
+{% for c in comments %}
+<p>{{c.body}}</p>
+{% endfor %}
+
+
+{% endblock %}
