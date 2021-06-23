@@ -7,7 +7,11 @@ def signup_view(request):
 	res_data = {}
 	if request.method =='POST':
 		if request.POST['password1'] == request.POST['password2']:
-			user = CustomUser.objects.create_user(username = request.POST['username'], password=request.POST['password1'], nickname= request.POST['nickname'])
+			user = CustomUser.objects.create_user(
+				username = request.POST['username'], 
+				password=request.POST['password1'], 
+				nickname= request.POST['nickname']
+			)
 			auth.login(request, user)
 			return redirect('home')
 		else:
